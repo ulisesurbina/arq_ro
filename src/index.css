@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------- */
+/* Sistema de diseño — ARQ' RO Construcciones                                         */
+/* Paleta: petróleo (primario) · grafito (texto/estructura) · hueso (fondo) */
+/* Acento firma: latón, usado con moderación (CTA, líneas de plano, datos) */
+/* ---------------------------------------------------------------------- */
+@theme {
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-petroleo-950: #071c21;
+  --color-petroleo-900: #0a2b32;
+  --color-petroleo-800: #0e3a43;
+  --color-petroleo-700: #0e4753;
+  --color-petroleo-600: #145c6b;
+  --color-petroleo-500: #1c7385;
+  --color-petroleo-400: #3c93a4;
+  --color-petroleo-200: #b6dbe1;
+  --color-petroleo-100: #dcedf0;
+
+  --color-grafito-900: #171b1d;
+  --color-grafito-800: #23282b;
+  --color-grafito-600: #454e53;
+  --color-grafito-500: #5b646b;
+  --color-grafito-300: #9aa3a8;
+  --color-grafito-200: #c7ccce;
+
+  --color-hueso-50: #f7f6f3;
+  --color-hueso-100: #efece5;
+
+  --color-laton-600: #96702a;
+  --color-laton-500: #b98a3d;
+  --color-laton-400: #d1a75d;
+  --color-laton-200: #ecd9b3;
+
+  --shadow-elevated: 0 30px 60px -20px rgb(7 28 33 / 0.35);
+  --shadow-card: 0 10px 30px -12px rgb(23 27 29 / 0.18);
+
+  --animate-draw: draw 1.4s ease forwards;
+  --animate-float-slow: float 7s ease-in-out infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-hueso-50);
+  color: var(--color-grafito-900);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background-color: var(--color-laton-400);
+  color: var(--color-petroleo-950);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-laton-500);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Línea de plano — utilidades para el divisor firma */
+.blueprint-path {
+  fill: none;
+  stroke: var(--color-laton-400);
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.input {
+  @apply w-full rounded-lg border border-grafito-200 bg-white px-3.5 py-2.5 text-sm text-grafito-900 placeholder:text-grafito-300 transition-colors;
+  @apply focus:border-petroleo-500 focus:outline-none;
+}
