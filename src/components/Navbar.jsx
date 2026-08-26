@@ -39,7 +39,13 @@ export default function Navbar() {
             scrolled || open ? "text-petroleo-900" : "text-white"
           }`}
         >
-          {project.name}
+          <img
+            src="/images/logo.png"
+            alt={project.name}
+            className={`h-10 sm:h-12 w-auto object-contain transition-opacity ${
+              scrolled || open ? "opacity-100" : "opacity-100"
+            }`}
+          />
         </a>
 
         <ul className="hidden md:flex items-center gap-8 font-mono text-[12px] uppercase tracking-[0.12em]">

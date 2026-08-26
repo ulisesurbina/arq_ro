@@ -6,7 +6,7 @@ import BlueprintDivider from "./BlueprintDivider";
 export default function Gallery() {
   return (
     <section className="max-w-6xl mx-auto px-5 sm:px-8">
-      <BlueprintDivider label="Amenidades" />
+      <BlueprintDivider label="El Entorno" />
 
       <div className="text-center max-w-xl mx-auto mb-10">
         <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 text-balance">

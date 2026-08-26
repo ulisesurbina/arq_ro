@@ -5,7 +5,7 @@ import { project, projectGallery } from "../data/project";
 import Media from "./Media";
 
 const HIGHLIGHTS = [
-  { icon: Building2, text: "Edificio de 4 niveles con diseño a medida" },
+  { icon: Building2, text: "Edificio con planta baja y 3 niveles de diseño a tu medida" },
   { icon: Layers, text: "3 distribuciones distintas" },
   { icon: Ruler, text: "Desde 57.3 m² hasta 90 m² de superficie" },
   { icon: Sparkles, text: "Acabados de diseño en cada unidad" },
@@ -47,10 +47,21 @@ export default function Overview() {
             transition={{ duration: 0.6 }}
             className="col-span-2 rounded-2xl overflow-hidden shadow-card aspect-[16/10]"
           >
-            <Media
+            {/* <Media
               src={projectGallery[0].src}
               alt={projectGallery[0].alt}
               className="h-full w-full object-cover"
+            /> */}
+            <video
+              src={project.heroVideo}
+              poster={project.heroPoster}
+              className="h-full w-full object-contain"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              aria-label="Video del proyecto ARQ' RO"
             />
           </motion.div>
           {projectGallery.slice(1, 3).map((photo, i) => (

@@ -17,8 +17,8 @@ function App() {
         <Hero />
         <Overview />
         <Gallery />
-        <FeatureShowcase />
         <Distributions />
+        <FeatureShowcase />
         <Units />
         <LocationMap />
         <ContactSection />

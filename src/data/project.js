@@ -7,14 +7,16 @@
 // ---------------------------------------------------------------------------
 
 export const project = {
-  name: "ARQ' RO Construcciones",
+  name: "ARQ' RO Inmobiliario",
   tagline: "Departamentos de diseño en el corazón de la ciudad",
   shortDescription:
     "10 departamentos en 3 distribuciones pensadas para vivir con calma: luz natural, materiales nobles y espacios que se adaptan a tu forma de vivir.",
+  heroImage: 
+    "/images/hero.jpg",
   heroVideo:
     "/video/heroVideo.mp4",
   heroPoster:
-    "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=70",
+    "/images/hero.jpg",
   address: "Bienes Nacionales #69 esq. Comisión del Maíz, Col. Cuatro Arboles, alcaldía Venustiano Carranza, CDMX",
   mapsEmbedSrc:
     "https://www.google.com/maps?q=Bienes+Nacionales+69+esq.+Comision+del+Maiz,+Col.+Cuatro+Arboles,+Venustiano+Carranza,+CDMX&output=embed",
@@ -26,17 +28,17 @@ export const project = {
   },
   stats: [
     { label: "Departamentos", value: "10" },
-    { label: "Distribuciones", value: "03" },
-    { label: "m² desde", value: "80.75" },
+    { label: "Distribuciones", value: "3" },
+    { label: "m² desde", value: "57.30" },
     { label: "Entrega", value: "2026" },
   ],
 };
 
-// Fotografías generales del proyecto (fachada, amenidades, vistas)
+// Fotografías generales del proyecto (fachada, entorno, vistas)
 export const projectGallery = [
   {
     id: "fachada",
-    src: "/images/hero2.jpg",
+    src: "/images/hero.jpg",
     alt: "Fachada principal del edificio",
     caption: "Fachada principal del edificio con iluminación nocturna",
   },
@@ -122,7 +124,7 @@ export const distributions = [
   {
     id: "tipo-a",
     name: "Tipo A — 101, 201, 301, 401",
-    area: 80.75,
+    area: 57.30,
     bedrooms: 3,
     bathrooms: 2.5,
     parking: 1,

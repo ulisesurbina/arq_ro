@@ -1,4 +1,4 @@
-# ARQ' RO Construcciones — Landing page de consultora inmobiliaria
+# ARQ' RO Inmobiliario — Landing page de consultora inmobiliaria
 
 Landing page en React + Vite + Tailwind CSS para presentar un proyecto inmobiliario:
 hero en video, características, galería, 3 distribuciones, 10 unidades disponibles,
@@ -39,7 +39,7 @@ Todo el contenido vive en **`src/data/project.js`**:
 
 - **`project`**: nombre, tagline, video del hero (`heroVideo`), dirección, link de
   Google Maps, y datos de contacto (WhatsApp, teléfono, correo).
-- **`projectGallery`**: fotos generales del edificio (fachada, amenidades).
+- **`projectGallery`**: fotos generales del edificio (fachada, entorno).
 - **`featureShowcase`**: las 5 tarjetas de detalle (habitaciones, acabados,
   distribución, diseño, costos).
 - **`distributions`**: las 3 tipologías (planos, m², recámaras, baños).

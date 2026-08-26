@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------- */
-/* Sistema de diseño — ARQ' RO Construcciones                                         */
+/* Sistema de diseño — ARQ' RO Inmobiliario                                        */
 /* Paleta: petróleo (primario) · grafito (texto/estructura) · hueso (fondo) */
 /* Acento firma: latón, usado con moderación (CTA, líneas de plano, datos) */
 /* ---------------------------------------------------------------------- */
@@ -51,6 +51,16 @@
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
 }
 
 html {

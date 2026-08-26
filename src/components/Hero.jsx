@@ -6,7 +6,7 @@ import { project } from "../data/project";
 export default function Hero() {
   return (
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
-      <video
+      {/* <video
         className="absolute inset-0 h-full w-full object-cover"
         src={project.heroVideo}
         poster={project.heroPoster}
@@ -15,20 +15,26 @@ export default function Hero() {
         loop
         playsInline
         aria-hidden="true"
+      /> */}
+      <img
+        className="absolute inset-0 h-full w-full object-cover animate-[heroZoom_12s_ease-in-out_infinite_alternate]"
+        src={project.heroImage}
+        alt=""
+        aria-hidden="true"
       />
       {/* Overlay: degradado petróleo para legibilidad y personalidad de marca */}
       <div className="absolute inset-0 bg-gradient-to-t from-petroleo-950 via-petroleo-950/55 to-petroleo-950/25" />
       <div className="absolute inset-0 bg-gradient-to-r from-petroleo-950/50 via-transparent to-petroleo-950/10" />
 
       <div className="relative z-10 h-full max-w-6xl mx-auto px-5 sm:px-8 flex flex-col justify-end pb-28 sm:pb-32">
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="font-mono text-[12px] uppercase tracking-[0.25em] text-laton-300 mb-4"
         >
           {project.address}
-        </motion.p>
+        </motion.p> */}
 
         <motion.h1
           initial={{ opacity: 0, y: 18 }}
