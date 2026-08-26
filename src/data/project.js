@@ -124,53 +124,53 @@ export const distributions = [
   {
     id: "tipo-a",
     name: "Tipo A — 101, 201, 301, 401",
-    area: 57.30,
+    area: 80.74,
     bedrooms: 3,
-    bathrooms: 2.5,
+    bathrooms: 1.5,
     parking: 1,
     description:
-      "Planta abierta ideal para quienes buscan un espacio compacto y eficiente.",
+      "Tres recámaras con planta abierta ideal para quienes buscan un espacio compacto y eficiente.",
     plan: "/images/terminaciones1.jpg",
     unitCount: 4,
   },
   {
     id: "tipo-b",
     name: "Tipo B — 202, 302, 402",
-    area: 92,
+    area: 54.39,
     bedrooms: 2,
     bathrooms: 1,
     parking: 1,
     description:
-      "Dos recámaras con baño completo cada una y sala de estar cómoda, perfecta para familias pequeñas.",
-    plan: "/images/terminaciones3.jpg",
+      "Dos recámaras con baño completo y sala de estar cómoda, perfecta para familias pequeñas.",
+    plan: "/images/terminaciones2.jpg",
     unitCount: 3,
   },
   {
     id: "tipo-c",
     name: "Tipo C — 203, 303, 403",
-    area: 138,
+    area: 74.23,
     bedrooms: 3,
     bathrooms: 1.5,
     parking: 1,
     description:
-      "Sala ámplia y luminosa y cocina moderna, ideal para quienes disfrutan de recibir visitas.",
-    plan: "/images/terminaciones2.jpg",
+      "Tres recámaras con sala ámplia, luminosa y cocina moderna, ideal para quienes disfrutan de recibir visitas.",
+    plan: "/images/terminaciones3.jpg",
     unitCount: 3,
   },
 ];
 
 // Las 10 unidades individuales — cada una referencia una distribución por id
 export const units = [
-  { id: "101", floor: 1, distributionId: "tipo-a", status: "disponible", price: 3_875_520 },
-  { id: "201", floor: 2, distributionId: "tipo-a", status: "disponible", price: 4_105_440 },
-  { id: "202", floor: 2, distributionId: "tipo-b", status: "disponible", price: 2_748_480 },
-  { id: "203", floor: 2, distributionId: "tipo-c", status: "disponible", price: 3_780_480 },
-  { id: "301", floor: 3, distributionId: "tipo-a", status: "disponible", price: 3_949_440 },
-  { id: "302", floor: 3, distributionId: "tipo-b", status: "disponible", price: 2_609_280 },
-  { id: "303", floor: 3, distributionId: "tipo-c", status: "disponible", price: 3_569_280 },
-  { id: "401", floor: 4, distributionId: "tipo-a", status: "disponible", price: 5_265_590 },
-  { id: "402", floor: 4, distributionId: "tipo-b", status: "disponible", price: 2_748_480 },
-  { id: "403", floor: 4, distributionId: "tipo-c", status: "disponible", price: 4_778_550 },
+  { id: "101", floor: "PB", distributionId: "tipo-a", status: "disponible", price: 3_875_520, details: { area: 80.75, bedrooms: 3, bathrooms: 2.5, roofGarden: "NO", parking: 1, servicePatio: 10.36, salePrice: 3778632, presalePrice: 3875520 } },
+  { id: "201", floor: 1, distributionId: "tipo-a", status: "disponible", price: 4_105_440, details: { area: 89.48, bedrooms: 3, bathrooms: 1.5, roofGarden: "NO", parking: 1, servicePatio: 5.69, salePrice: 4002804, presalePrice: 4105440 } },
+  { id: "202", floor: 1, distributionId: "tipo-b", status: "disponible", price: 2_748_480, details: { area: 57.30, bedrooms: 2, bathrooms: 1, roofGarden: "NO", parking: 1, servicePatio: 0, salePrice: 2679968, presalePrice: 2748480 } },
+  { id: "203", floor: 1, distributionId: "tipo-c", status: "disponible", price: 3_780_480, details: { area: 78.84, bedrooms: 3, bathrooms: 1.5, roofGarden: "NO", parking: 1, servicePatio: 6.06, salePrice: 3686768, presalePrice: 3780480 } },
+  { id: "301", floor: 2, distributionId: "tipo-a", status: "disponible", price: 3_949_440, details: { area: 82.12, bedrooms: 3, bathrooms: 1.5, roofGarden: "NO", parking: 1, servicePatio: 0, salePrice: 3850704, presalePrice: 3949440 } },
+  { id: "302", floor: 2, distributionId: "tipo-b", status: "disponible", price: 2_609_280, details: { area: 54.39, bedrooms: 2, bathrooms: 1, roofGarden: "NO", parking: 1, servicePatio: 0, salePrice: 2544048, presalePrice: 2609280 } },
+  { id: "303", floor: 2, distributionId: "tipo-c", status: "disponible", price: 3_569_280, details: { area: 74.23, bedrooms: 3, bathrooms: 1.5, roofGarden: "NO", parking: 1, servicePatio: 0, salePrice: 3480048, presalePrice: 3569280 } },
+  { id: "401", floor: 3, distributionId: "tipo-a", status: "disponible", price: 5_265_590, details: { area: 80.74, bedrooms: 3, bathrooms: 2.5, roofGarden: "SÍ", parking: 2, servicePatio: 0, salePrice: 5029311, presalePrice: 5265590 } },
+  { id: "402", floor: 3, distributionId: "tipo-b", status: "disponible", price: 2_748_480, details: { area: 57.30, bedrooms: 2, bathrooms: 1, roofGarden: "NO", parking: 1, servicePatio: 0, salePrice: 2679768, presalePrice: 2748480 } },
+  { id: "403", floor: 3, distributionId: "tipo-c", status: "disponible", price: 4_778_550, details: { area: 72.80, bedrooms: 3, bathrooms: 2.5, roofGarden: "SÍ", parking: 2, servicePatio: 0, salePrice: 4539650, presalePrice: 4778550 } },
 ];
 
 export const unitStatusLabels = {
