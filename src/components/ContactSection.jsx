@@ -29,11 +29,10 @@ export default function ContactSection() {
             Agenda tu visita
           </span>
           <h2 className="font-display text-3xl sm:text-4xl text-white mt-3 text-balance">
-            Conoce el departamento en persona
+            Tu próximo espacio comienza aquí
           </h2>
           <p className="mt-4 text-grafito-200 max-w-md leading-relaxed">
-            Completa el formulario y te contactamos por WhatsApp para confirmar día y hora. También
-            puedes escribirnos directamente.
+            La mejor forma de conocer un espacio es recorrerlo. Cada detalle fue pensado para crear una experiencia de vida cómoda y funcional.
           </p>
 
           <div className="mt-8 flex flex-col gap-4">

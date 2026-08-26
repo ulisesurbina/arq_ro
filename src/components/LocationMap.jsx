@@ -11,7 +11,7 @@ export default function LocationMap() {
 
       <div className="text-center max-w-xl mx-auto mb-10">
         <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 text-balance">
-          A la mano de todo
+          Cerca de lo que te importa, dónde todo conecta
         </h2>
         <p className="mt-4 text-grafito-600">{project.address}</p>
       </div>

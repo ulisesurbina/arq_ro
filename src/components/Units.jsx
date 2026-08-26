@@ -20,11 +20,10 @@ export default function Units() {
       <div className="flex flex-wrap items-end justify-between gap-4 mb-10">
         <div>
           <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 text-balance">
-            Los 10 departamentos
+            Espacios para elegir
           </h2>
           <p className="mt-3 text-grafito-600 max-w-lg">
-            Disponibilidad actualizada. Da clic en un departamento para preguntar por él al
-            agendar tu visita.
+            Descubre las diferentes unidades disponibles, encuentra el departamento que va contigo y que mejor se adapta a ti.
           </p>
         </div>
         <ul className="flex flex-wrap gap-4 font-mono text-[11px] uppercase tracking-[0.1em]">

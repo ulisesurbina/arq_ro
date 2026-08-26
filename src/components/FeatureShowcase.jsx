@@ -16,7 +16,7 @@ export default function FeatureShowcase() {
             Habitaciones · Acabados · Diseño
           </span>
           <h2 className="font-display text-3xl sm:text-4xl text-white mt-3 text-balance">
-            Cada elección de material, justificada
+            Calidad en cada superficie, carácter en cada espacio.
           </h2>
         </div>
 

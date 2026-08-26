@@ -5,8 +5,8 @@ import { project } from "../data/project";
 
 const LINKS = [
   { href: "#proyecto", label: "Proyecto" },
-  { href: "#detalles", label: "Detalles" },
   { href: "#distribuciones", label: "Distribuciones" },
+  { href: "#detalles", label: "Detalles" },
   { href: "#unidades", label: "Unidades" },
   { href: "#ubicacion", label: "Ubicación" },
 ];
