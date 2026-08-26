@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import MarqueeBanner from "./components/MarqueeBanner";
 import Overview from "./components/Overview";
 import Gallery from "./components/Gallery";
 import FeatureShowcase from "./components/FeatureShowcase";
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <MarqueeBanner />
         <Overview />
         <Gallery />
         <Distributions />

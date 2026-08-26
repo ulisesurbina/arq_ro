@@ -42,7 +42,7 @@ Todo el contenido vive en **`src/data/project.js`**:
 - **`projectGallery`**: fotos generales del edificio (fachada, entorno).
 - **`featureShowcase`**: las 5 tarjetas de detalle (habitaciones, acabados,
   distribución, diseño, costos).
-- **`distributions`**: las 3 tipologías (planos, m², recámaras, baños).
+- **`distributions`**: las 3 distribuciones (planos, m², recámaras, baños).
 - **`units`**: las 10 unidades, cada una ligada a una tipología por `distributionId`.
 
 Todas las imágenes usadas ahora son fotos de referencia de Unsplash — reemplaza

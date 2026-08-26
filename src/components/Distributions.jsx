@@ -19,7 +19,7 @@ export default function Distributions() {
           3 formas de vivir el mismo edificio
         </h2>
         <p className="mt-4 text-grafito-600">
-          Los 10 departamentos se agrupan en tres tipologías. Elige una para ver su plano y ficha
+          Los 10 departamentos se agrupan en tres distribuciones. Elige una para ver su plano y ficha
           técnica.
         </p>
       </div>
