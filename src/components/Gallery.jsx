@@ -9,7 +9,7 @@ export default function Gallery() {
       <BlueprintDivider label="El Entorno" />
 
       <div className="text-center max-w-xl mx-auto mb-10">
-        <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 text-balance">
+        <h2 className="font-display text-3xl sm:text-4xl text-azul-950 text-balance">
           Un edificio pensado para vivirlo
         </h2>
         <p className="mt-4 text-grafito-600">
@@ -34,7 +34,7 @@ export default function Gallery() {
               alt={photo.alt}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-petroleo-950/85 to-transparent px-4 py-3 text-[13px] text-white/95 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-azul-950/85 to-transparent px-4 py-3 text-[13px] text-white/95 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               {photo.caption}
             </figcaption>
           </motion.figure>

@@ -10,7 +10,7 @@ export default function LocationMap() {
       <BlueprintDivider label="Ubicación" />
 
       <div className="text-center max-w-xl mx-auto mb-10">
-        <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 text-balance">
+        <h2 className="font-display text-3xl sm:text-4xl text-azul-950 text-balance">
           Cerca de lo que te importa, dónde todo conecta
         </h2>
         <p className="mt-4 text-grafito-600">{project.address}</p>
@@ -33,8 +33,8 @@ export default function LocationMap() {
             referrerPolicy="no-referrer-when-downgrade"
           />
 
-          <div className="absolute left-4 bottom-4 sm:left-6 sm:bottom-6 max-w-xs rounded-xl bg-petroleo-950/90 backdrop-blur px-5 py-4 text-white shadow-elevated">
-            <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-laton-300">
+          <div className="absolute left-4 bottom-4 sm:left-6 sm:bottom-6 max-w-xs rounded-xl bg-azul-950/90 backdrop-blur px-5 py-4 text-white shadow-elevated">
+            <p className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] text-azul-300">
               <MorphIcon icon={MapPin} size={14} strokeWidth={1.75} />
               {project.name}
             </p>
@@ -43,7 +43,7 @@ export default function LocationMap() {
               href={project.mapsDirectionsUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-laton-300 hover:text-laton-200"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-azul-300 hover:text-azul-200"
             >
               <MorphIcon icon={Compass} size={14} strokeWidth={1.75} />
               Cómo llegar

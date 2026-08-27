@@ -10,7 +10,7 @@ export default function Media({ src, alt = "", className = "", loading = "lazy",
   if (failed) {
     return (
       <div
-        className={`bg-gradient-to-br from-petroleo-700 to-petroleo-900 flex items-center justify-center text-petroleo-200 text-xs font-mono ${className}`}
+        className={`bg-gradient-to-br from-azul-700 to-azul-900 flex items-center justify-center text-azul-200 text-xs font-mono ${className}`}
         role="img"
         aria-label={alt}
       >

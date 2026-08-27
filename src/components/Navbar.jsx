@@ -36,7 +36,7 @@ export default function Navbar() {
         <a
           href="#top"
           className={`font-display text-lg sm:text-xl tracking-tight transition-colors ${
-            scrolled || open ? "text-petroleo-900" : "text-white"
+            scrolled || open ? "text-azul-900" : "text-white"
           }`}
         >
           <img
@@ -53,7 +53,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className={`transition-colors hover:text-laton-500 ${
+                className={`transition-colors hover:text-azul-600 ${
                   scrolled ? "text-grafito-600" : "text-white/85"
                 }`}
               >
@@ -65,7 +65,7 @@ export default function Navbar() {
 
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center rounded-full bg-laton-500 px-5 py-2.5 text-sm font-medium text-petroleo-950 transition-colors hover:bg-laton-400"
+          className="hidden md:inline-flex items-center rounded-full bg-azul-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
         >
           Agendar visita
         </a>
@@ -76,7 +76,7 @@ export default function Navbar() {
           aria-expanded={open}
           onClick={() => setOpen((o) => !o)}
           className={`md:hidden inline-flex items-center justify-center rounded-full w-10 h-10 ${
-            scrolled || open ? "text-petroleo-900" : "text-white"
+            scrolled || open ? "text-azul-900" : "text-white"
           }`}
         >
           <MorphIcon icon={open ? X : Menu} size={24} strokeWidth={1.75} />
@@ -91,7 +91,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 font-display text-2xl text-petroleo-900"
+                  className="block py-3 font-display text-2xl text-azul-900"
                 >
                   {link.label}
                 </a>
@@ -101,7 +101,7 @@ export default function Navbar() {
           <a
             href="#contacto"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex items-center justify-center w-full rounded-full bg-laton-500 px-5 py-3 font-medium text-petroleo-950"
+            className="mt-4 inline-flex items-center justify-center w-full rounded-full bg-azul-600 px-5 py-3 font-medium text-white"
           >
             Agendar visita
           </a>

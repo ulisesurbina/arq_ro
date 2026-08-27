@@ -32,6 +32,13 @@ export const project = {
     { label: "m² desde", value: "57.30" },
     { label: "Entrega", value: "2026" },
   ],
+  social: {
+    instagram: "https://instagram.com/#",
+    facebook: "https://facebook.com/profile.php?id=61592102893744",
+    tiktok: "https://tiktok.com/#",
+    youtube: "https://youtube.com/#",
+    twitter: "https://x.com/#",
+  },
 };
 
 // Fotografías generales del proyecto (fachada, entorno, vistas)
@@ -124,6 +131,7 @@ export const distributions = [
   {
     id: "tipo-a",
     name: "Tipo A — 101, 201, 301, 401",
+    shortLabel: "Tipo A",
     area: 80.74,
     bedrooms: 3,
     bathrooms: 1.5,
@@ -131,11 +139,13 @@ export const distributions = [
     description:
       "Tres recámaras con planta abierta ideal para quienes buscan un espacio compacto y eficiente.",
     plan: "/images/terminaciones1.jpg",
+    photo: "/images/sala1.jpg",
     unitCount: 4,
   },
   {
     id: "tipo-b",
     name: "Tipo B — 202, 302, 402",
+    shortLabel: "Tipo B",
     area: 54.39,
     bedrooms: 2,
     bathrooms: 1,
@@ -143,11 +153,13 @@ export const distributions = [
     description:
       "Dos recámaras con baño completo y sala de estar cómoda, perfecta para familias pequeñas.",
     plan: "/images/terminaciones2.jpg",
+    photo: "/images/sala2.jpg",
     unitCount: 3,
   },
   {
     id: "tipo-c",
     name: "Tipo C — 203, 303, 403",
+    shortLabel: "Tipo C",
     area: 74.23,
     bedrooms: 3,
     bathrooms: 1.5,
@@ -155,6 +167,7 @@ export const distributions = [
     description:
       "Tres recámaras con sala ámplia, luminosa y cocina moderna, ideal para quienes disfrutan de recibir visitas.",
     plan: "/images/terminaciones3.jpg",
+    photo: "/images/sala3.jpg",
     unitCount: 3,
   },
 ];

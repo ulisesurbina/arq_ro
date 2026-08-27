@@ -23,15 +23,15 @@ export default function Hero() {
         aria-hidden="true"
       />
       {/* Overlay: degradado petróleo para legibilidad y personalidad de marca */}
-      <div className="absolute inset-0 bg-gradient-to-t from-petroleo-950 via-petroleo-950/55 to-petroleo-950/25" />
-      <div className="absolute inset-0 bg-gradient-to-r from-petroleo-950/50 via-transparent to-petroleo-950/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-azul-950 via-azul-950/55 to-azul-950/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-azul-950/50 via-transparent to-azul-950/10" />
 
       <div className="relative z-10 h-full max-w-6xl mx-auto px-5 sm:px-8 flex flex-col justify-end pb-28 sm:pb-32">
         {/* <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-mono text-[12px] uppercase tracking-[0.25em] text-laton-300 mb-4"
+          className="font-mono text-[12px] uppercase tracking-[0.25em] text-azul-300 mb-4"
         >
           {project.address}
         </motion.p> */}
@@ -62,7 +62,7 @@ export default function Hero() {
         >
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 rounded-full bg-laton-500 px-6 py-3.5 text-sm font-medium text-petroleo-950 transition-colors hover:bg-laton-400"
+            className="inline-flex items-center gap-2 rounded-full bg-azul-600 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
           >
             Agendar visita
             <MorphIcon icon={ArrowRight} size={16} strokeWidth={2} />
@@ -81,7 +81,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="absolute inset-x-0 bottom-0 z-10 border-t border-white/15 bg-petroleo-950/50 backdrop-blur-md"
+        className="absolute inset-x-0 bottom-0 z-10 border-t border-white/15 bg-azul-950/50 backdrop-blur-md"
       >
         <dl className="max-w-6xl mx-auto px-5 sm:px-8 py-5 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
           {project.stats.map((stat) => (

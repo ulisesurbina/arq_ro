@@ -16,10 +16,10 @@ export default function Overview() {
     <section id="proyecto" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
       <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
         <div>
-          {/* <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-laton-600">
+          {/* <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-azul-700">
             El proyecto
           </span> */}
-          <h2 className="font-display text-3xl sm:text-4xl text-petroleo-950 mt-3 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl text-azul-950 mt-3 text-balance">
             Diseño pensado para vivir, no solo para habitar
           </h2>
           <p className="mt-5 text-grafito-600 leading-relaxed">
@@ -29,7 +29,7 @@ export default function Overview() {
           <ul className="mt-8 space-y-4">
             {HIGHLIGHTS.map((item) => (
               <li key={item.text} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-petroleo-700/10 text-petroleo-700">
+                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-azul-700/10 text-azul-700">
                   <MorphIcon icon={item.icon} size={16} strokeWidth={1.75} />
                 </span>
                 <span className="text-sm text-grafito-700 pt-1">{item.text}</span>

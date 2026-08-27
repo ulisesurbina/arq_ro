@@ -25,7 +25,7 @@ export default function ContactSection() {
     <section id="contacto" className="bg-grafito-900">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
         <div>
-          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-laton-300">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-azul-300">
             Agenda tu visita
           </span>
           <h2 className="font-display text-3xl sm:text-4xl text-white mt-3 text-balance">
@@ -40,7 +40,7 @@ export default function ContactSection() {
               href={`https://wa.me/${project.contact.whatsappNumber}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 text-white/90 hover:text-laton-300 transition-colors"
+              className="inline-flex items-center gap-3 text-white/90 hover:text-azul-300 transition-colors"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
                 <MorphIcon icon={MessageCircle} size={17} strokeWidth={1.75} />
@@ -49,7 +49,7 @@ export default function ContactSection() {
             </a>
             <a
               href={`tel:${project.contact.phoneDisplay.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-3 text-white/90 hover:text-laton-300 transition-colors"
+              className="inline-flex items-center gap-3 text-white/90 hover:text-azul-300 transition-colors"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
                 <MorphIcon icon={Phone} size={17} strokeWidth={1.75} />
@@ -137,7 +137,7 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-petroleo-800 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-petroleo-700"
+            className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-azul-800 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
           >
             Enviar por WhatsApp
             <MorphIcon icon={Send} size={16} strokeWidth={2} />
@@ -153,7 +153,7 @@ function Field({ label, children, required, full }) {
     <label className={`block ${full ? "sm:col-span-2" : ""}`}>
       <span className="block text-xs font-mono uppercase tracking-[0.1em] text-grafito-500 mb-1.5">
         {label}
-        {required && <span className="text-laton-600"> *</span>}
+        {required && <span className="text-azul-700"> *</span>}
       </span>
       {children}
     </label>
