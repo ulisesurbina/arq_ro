@@ -53,6 +53,58 @@
   --animate-float-slow: float 7s ease-in-out infinite;
 }
 
+.animate-card-breathe {
+  animation: card-breathe 2.4s ease-in-out infinite;
+}
+@keyframes card-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+.unit-card-border {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: none;
+}
+.unit-card-border::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 160%;
+  top: -30%;
+  left: 50%;
+  background: linear-gradient(180deg, #2563eb, #38bdf8, #2563eb);
+  z-index: -2;
+  pointer-events: none;
+  animation: rotUnitBorder 4s linear infinite;
+  -webkit-animation: rotUnitBorder 4s linear infinite;
+  transform: translateX(-50%) rotate(0deg);
+  -webkit-transform: translateX(-50%) rotate(0deg);
+  -moz-transform: translateX(-50%) rotate(0deg);
+  -ms-transform: translateX(-50%) rotate(0deg);
+  -o-transform: translateX(-50%) rotate(0deg);
+}
+.unit-card-border::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: calc(1rem - 2px);
+  background: white;
+
+  z-index: -1;
+  pointer-events: none;
+}
+@keyframes rotUnitBorder {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;

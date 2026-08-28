@@ -6,9 +6,6 @@ import { units, distributions, unitStatusLabels } from "../data/project";
 import BlueprintDivider from "./BlueprintDivider";
 import UnitModal from "./UnitModal";
 
-// Una sola familia de azul para la marca: "disponible" usa el azul principal
-// (el estado que queremos destacar), y los otros dos estados usan grises
-// neutros para que los tres sigan siendo distinguibles de un vistazo.
 const STATUS_STYLES = {
   disponible: "bg-azul-600/15 text-azul-700 ring-1 ring-azul-600/30",
   apartado: "bg-grafito-800/8 text-grafito-600 ring-1 ring-grafito-300",
@@ -54,6 +51,7 @@ export default function Units() {
           const distribution = byDistribution[unit.distributionId];
           return (
             <motion.button
+              className="unit-card-border group flex flex-col justify-between rounded-2xl bg-white ring-1 ring-grafito-200 p-5 text-left cursor-pointer transition-shadow duration-300 hover:shadow-elevated hover:ring-azul-400"
               key={unit.id}
               type="button"
               onClick={() => setSelectedUnitId(unit.id)}
@@ -64,34 +62,34 @@ export default function Units() {
               animate={{ scale: [1, 1.012, 1] }}
               whileHover={{ scale: 1.02, y: -4 }}
               whileTap={{ scale: 0.98 }}
-              className="group flex flex-col justify-between rounded-2xl bg-white ring-1 ring-grafito-200 p-5 text-left cursor-pointer transition-shadow duration-300 hover:shadow-elevated hover:ring-azul-400"
             >
-              <div className="flex items-start justify-between">
-                <div>
-                  <p className="font-display text-2xl text-azul-950">Depto {unit.id}</p>
-                  <p className="text-sm text-grafito-500 mt-0.5">
-                    Nivel {unit.floor} · Ficha técnica
-                  </p>
+              {/* <div className="animate-card-breathe group-hover:[animation-play-state:paused]"> */}
+                <div className="flex items-start justify-between">
+                  <div>
+                    <p className="font-display text-2xl text-azul-950">Depto {unit.id}</p>
+                    <p className="text-sm text-grafito-500 mt-0.5">
+                      Nivel {unit.floor} · Ficha técnica
+                    </p>
+                  </div>
+                  <span
+                    className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.08em] ${STATUS_STYLES[unit.status]}`}
+                  >
+                    {unitStatusLabels[unit.status]}
+                  </span>
                 </div>
-                <span
-                  className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.08em] ${STATUS_STYLES[unit.status]}`}
-                >
-                  {unitStatusLabels[unit.status]}
-                </span>
-              </div>
-
-              <div className="mt-6 flex items-end justify-between">
-                <div>
-                  <p className="flex items-center gap-1.5 text-xs text-grafito-500 font-mono">
-                    <MorphIcon icon={Ruler} size={13} strokeWidth={1.75} />
-                    {distribution.area} m²
-                  </p>
-                  {/* <p className="font-mono text-lg text-grafito-900 mt-1">{currency(unit.price)}</p> */}
+                <div className="mt-6 flex items-end justify-between">
+                  <div>
+                    <p className="flex items-center gap-1.5 text-xs text-grafito-500 font-mono">
+                      <MorphIcon icon={Ruler} size={13} strokeWidth={1.75} />
+                      {distribution.area} m²
+                    </p>
+                    {/* <p className="font-mono text-lg text-grafito-900 mt-1">{currency(unit.price)}</p> */}
+                  </div>
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-hueso-100 text-azul-700 transition-all duration-300 group-hover:bg-azul-700 group-hover:text-white group-hover:rotate-45">
+                    <MorphIcon icon={ArrowUpRight} size={16} strokeWidth={1.75} />
+                  </span>
                 </div>
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-hueso-100 text-azul-700 transition-all duration-300 group-hover:bg-azul-700 group-hover:text-white group-hover:rotate-45">
-                  <MorphIcon icon={ArrowUpRight} size={16} strokeWidth={1.75} />
-                </span>
-              </div>
+              {/* </div> */}
             </motion.button>
           );
         })}
