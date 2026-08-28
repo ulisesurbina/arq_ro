@@ -1,3 +1,4 @@
+import { trackEvent } from "../lib/analytics";
 import { MorphIcon } from "morphicons/react";
 import { SquarePlay, Music2, X as XIcon } from "lucide";
 import { project } from "../data/project";
@@ -21,7 +22,7 @@ export default function Footer() {
           <ul className="flex items-center gap-3">
             {activeSocials.map(({ key, label, Icon, custom }) => (
               <li key={key}>
-                <a href={project.social[key]} target="_blank" rel="noreferrer" aria-label={label} title={label}
+                <a href={project.social[key]} target="_blank" rel="noreferrer" aria-label={label} title={label} onClick={() => trackEvent("social_footer", { network: key })}
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 transition-colors hover:bg-azul-600 hover:text-white">
                   {custom ? <Icon size={16} /> : <MorphIcon icon={Icon} size={16} strokeWidth={1.75} />}
                 </a>

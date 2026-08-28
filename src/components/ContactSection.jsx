@@ -1,3 +1,4 @@
+import { trackEvent } from "../lib/analytics";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { MorphIcon } from "morphicons/react";
@@ -17,6 +18,7 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    trackEvent("contact_form_submit", { unit_interest: form.unitInterest || "sin_especificar" });
     const url = buildWhatsappUrl(project.contact.whatsappNumber, form);
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -40,6 +42,7 @@ export default function ContactSection() {
               href={`https://wa.me/${project.contact.whatsappNumber}`}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackEvent("whatsapp_directo_footer", { location: "contacto" })}
               className="inline-flex items-center gap-3 text-white/90 hover:text-azul-300 transition-colors"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
@@ -49,6 +52,7 @@ export default function ContactSection() {
             </a>
             <a
               href={`tel:${project.contact.phoneDisplay.replace(/\s+/g, "")}`}
+              onClick={() => trackEvent("phone_footer", { location: "contacto" })}
               className="inline-flex items-center gap-3 text-white/90 hover:text-azul-300 transition-colors"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
@@ -58,6 +62,7 @@ export default function ContactSection() {
             </a>
             <a
               href={`mailto:${project.contact.email}`}
+              onClick={() => trackEvent("email_footer", { location: "contacto" })}
               className="inline-flex items-center gap-3 text-white/90 hover:text-laton-300 transition-colors"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">

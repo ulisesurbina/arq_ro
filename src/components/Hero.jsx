@@ -1,3 +1,4 @@
+import { trackEvent } from "../lib/analytics";
 import { motion } from "framer-motion";
 import { MorphIcon } from "morphicons/react";
 import { ArrowRight, ArrowDown } from "lucide";
@@ -62,6 +63,7 @@ export default function Hero() {
         >
           <a
             href="#contacto"
+            onClick={() => trackEvent("agendar_visita_banner", { location: "hero" })}
             className="inline-flex items-center gap-2 rounded-full bg-azul-600 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
           >
             Agendar visita

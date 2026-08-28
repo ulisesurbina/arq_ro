@@ -1,3 +1,4 @@
+import { trackEvent } from "../lib/analytics";
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MorphIcon } from "morphicons/react";
@@ -104,6 +105,13 @@ export default function UnitModal({ unit, distribution, onClose }) {
               href={whatsappUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={() =>
+                trackEvent("unit_whatsapp_deptoDetail", {
+                  unit_id: unit.id,
+                  distribution: distribution.shortLabel,
+                  location: "unit_modal",
+                })
+              }
               className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-azul-100 border-azul-200 px-6 py-3.5 text-sm font-medium text-azul-800 transition-colors hover:bg-azul-700 hover:text-white"
             >
               Preguntar por este departamento

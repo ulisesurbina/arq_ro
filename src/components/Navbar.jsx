@@ -1,3 +1,4 @@
+import { trackEvent } from "../lib/analytics";
 import { useEffect, useState } from "react";
 import { MorphIcon } from "morphicons/react";
 import { Menu, X } from "lucide";
@@ -65,6 +66,7 @@ export default function Navbar() {
 
         <a
           href="#contacto"
+          onClick={() => trackEvent("agendar_visita_navbar_desktop", { location: "navbar_desktop" })}
           className="hidden md:inline-flex items-center rounded-full bg-azul-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
         >
           Agendar visita
@@ -100,7 +102,10 @@ export default function Navbar() {
           </ul>
           <a
             href="#contacto"
-            onClick={() => setOpen(false)}
+            onClick={() => {
+              setOpen(false);
+              trackEvent("agendar_visita_navbar_mobile", { location: "navbar_mobile" });
+            }}
             className="mt-4 inline-flex items-center justify-center w-full rounded-full bg-azul-600 px-5 py-3 font-medium text-white"
           >
             Agendar visita
