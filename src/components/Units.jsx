@@ -63,33 +63,31 @@ export default function Units() {
               whileHover={{ scale: 1.02, y: -4 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* <div className="animate-card-breathe group-hover:[animation-play-state:paused]"> */}
-                <div className="flex items-start justify-between">
-                  <div>
-                    <p className="font-display text-2xl text-azul-950">Depto {unit.id}</p>
-                    <p className="text-sm text-grafito-500 mt-0.5">
-                      Nivel {unit.floor} · Ficha técnica
-                    </p>
-                  </div>
-                  <span
-                    className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.08em] ${STATUS_STYLES[unit.status]}`}
-                  >
-                    {unitStatusLabels[unit.status]}
-                  </span>
+              <div className="flex items-start justify-between">
+                <div>
+                  <p className="font-display text-2xl text-azul-950">Depto {unit.id}</p>
+                  <p className="text-sm text-grafito-500 mt-0.5">
+                    Nivel {unit.floor} · Ficha técnica
+                  </p>
                 </div>
-                <div className="mt-6 flex items-end justify-between">
-                  <div>
-                    <p className="flex items-center gap-1.5 text-xs text-grafito-500 font-mono">
-                      <MorphIcon icon={Ruler} size={13} strokeWidth={1.75} />
-                      {distribution.area} m²
-                    </p>
-                    {/* <p className="font-mono text-lg text-grafito-900 mt-1">{currency(unit.price)}</p> */}
-                  </div>
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-hueso-100 text-azul-700 transition-all duration-300 group-hover:bg-azul-700 group-hover:text-white group-hover:rotate-45">
-                    <MorphIcon icon={ArrowUpRight} size={16} strokeWidth={1.75} />
-                  </span>
+                <span
+                  className={`shrink-0 rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.08em] ${STATUS_STYLES[unit.status]}`}
+                >
+                  {unitStatusLabels[unit.status]}
+                </span>
+              </div>
+              <div className="mt-6 flex items-end justify-between">
+                <div>
+                  <p className="flex items-center gap-1.5 text-xs text-grafito-500 font-mono">
+                    <MorphIcon icon={Ruler} size={13} strokeWidth={1.75} />
+                    {distribution.area} m²
+                  </p>
+                  {/* <p className="font-mono text-lg text-grafito-900 mt-1">{currency(unit.price)}</p> */}
                 </div>
-              {/* </div> */}
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-hueso-100 text-azul-700 transition-all duration-300 group-hover:bg-azul-700 group-hover:text-white group-hover:rotate-45">
+                  <MorphIcon icon={ArrowUpRight} size={16} strokeWidth={1.75} />
+                </span>
+              </div>
             </motion.button>
           );
         })}

@@ -55,54 +55,90 @@
 
 .animate-card-breathe {
   animation: card-breathe 2.4s ease-in-out infinite;
+  -webkit-animation: card-breathe 2.4s ease-in-out infinite;
 }
 @keyframes card-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.025); }
+  0%, 100% { transform: scale(1); -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); }
+  50% { transform: scale(1.025); -webkit-transform: scale(1.025); -moz-transform: scale(1.025); -ms-transform: scale(1.025); -o-transform: scale(1.025); }
 }
 
 .unit-card-border {
   position: relative;
-  overflow: hidden;
   isolation: isolate;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: transparent;
   border: none;
 }
 .unit-card-border::before {
   content: "";
   position: absolute;
-  width: 120px;
-  height: 160%;
-  top: -30%;
-  left: 50%;
-  background: linear-gradient(180deg, #2563eb, #38bdf8, #2563eb);
   z-index: -2;
-  pointer-events: none;
-  animation: rotUnitBorder 4s linear infinite;
-  -webkit-animation: rotUnitBorder 4s linear infinite;
-  transform: translateX(-50%) rotate(0deg);
-  -webkit-transform: translateX(-50%) rotate(0deg);
-  -moz-transform: translateX(-50%) rotate(0deg);
-  -ms-transform: translateX(-50%) rotate(0deg);
-  -o-transform: translateX(-50%) rotate(0deg);
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #2563eb;
+  opacity: 0.9;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  animation: unit-blob-bounce 5s infinite ease;
+  -webkit-animation: unit-blob-bounce 5s infinite ease;
+  filter: blur(18px);
+  -webkit-filter: blur(18px);
 }
 .unit-card-border::after {
   content: "";
   position: absolute;
-  inset: 2px;
-  border-radius: calc(1rem - 2px);
-  background: white;
-
+  inset: 1px;
   z-index: -1;
-  pointer-events: none;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: calc(1rem - 1px);
+  -webkit-border-radius: calc(1rem - 1px);
+  -moz-border-radius: calc(1rem - 1px);
+  -ms-border-radius: calc(1rem - 1px);
+  -o-border-radius: calc(1rem - 1px);
 }
-@keyframes rotUnitBorder {
-  from {
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  to {
-    transform: translateX(-50%) rotate(360deg);
-  }
+@keyframes unit-blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -webkit-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -moz-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -ms-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -o-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+}
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    -webkit-transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    -moz-transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    -ms-transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    -o-transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+}
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    -webkit-transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    -moz-transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    -ms-transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    -o-transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+}
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    -webkit-transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    -moz-transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    -ms-transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    -o-transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+}
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -webkit-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -moz-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -ms-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    -o-transform: translate(-100%, -100%) translate3d(0, 0, 0);
+}
 }
 
 @keyframes draw {
