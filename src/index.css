@@ -79,7 +79,7 @@
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  background: #2563eb;
+  background: var(--color-azul-900);
   opacity: 0.9;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
