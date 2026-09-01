@@ -142,7 +142,7 @@ export default function ContactSection() {
 
           <button
             type="submit"
-            className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-azul-700 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-800"
+            className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-azul-600 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
           >
             Enviar por WhatsApp
             <MorphIcon icon={Send} size={16} strokeWidth={2} />
