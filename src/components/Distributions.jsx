@@ -53,7 +53,7 @@ export default function Distributions() {
             onClick={() => handleSelect(d.id)}
             className={`relative overflow-hidden rounded-full px-5 py-2.5 text-sm font-medium transition-colors ${
               activeId === d.id
-                ? "bg-azul-800 text-white"
+                ? "bg-azul-600 text-white"
                 : "bg-white text-grafito-600 ring-1 ring-grafito-200 hover:ring-azul-400"
             }`}
           >
@@ -80,7 +80,7 @@ export default function Distributions() {
           className="grid md:grid-cols-2 gap-8 md:gap-12 items-center pb-20 sm:pb-28"
         >
           <div className="rounded-2xl overflow-hidden shadow-elevated aspect-[4/3] bg-grafito-100">
-            <Media src={active.plan} alt={`Plano de distribución ${active.name}`} className="h-full w-full object-cover" />
+            <Media src={active.plan} alt={`Plano de distribución ${active.name}`} className="h-full w-full object-contain bg-fondo-100" />
           </div>
           <div>
             <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-azul-700">

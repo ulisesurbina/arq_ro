@@ -64,7 +64,7 @@ export default function Hero() {
           <a
             href="#contacto"
             onClick={() => trackEvent("agendar_visita_banner", { location: "hero" })}
-            className="inline-flex items-center gap-2 rounded-full bg-azul-600 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-700"
+            className="inline-flex items-center gap-2 rounded-full bg-azul-800 px-6 py-3.5 text-sm font-medium text-white transition-colors hover:bg-azul-900"
           >
             Agendar visita
             <MorphIcon icon={ArrowRight} size={16} strokeWidth={2} />

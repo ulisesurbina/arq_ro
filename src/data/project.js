@@ -68,16 +68,22 @@ export const projectGallery = [
     caption: "Recamara con diseño moderno y elegante",
   },
   {
+    id: "coworking",
+    src: "/images/vistaArriba2.jpg",
+    alt: "Vita superior",
+    caption: "Vista superior con diseño arquitectónico destacado",
+  },
+  {
     id: "gimnasio",
     src: "/images/sala1.jpg",
     alt: "Sala del departamento",
     caption: "Sala del departamento con decoración contemporánea",
   },
   {
-    id: "coworking",
-    src: "/images/vistaArriba2.jpg",
-    alt: "Vita superior",
-    caption: "Vista superior con diseño arquitectónico destacado",
+    id: "plano",
+    src: "/images/vistaArriba3.jpg",
+    alt: "Plano completo",
+    caption: "Vista superior de las 3 distribuciones del edificio",
   },
 ];
 

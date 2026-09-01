@@ -9,6 +9,7 @@ import Units from "./components/Units";
 import LocationMap from "./components/LocationMap";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import SalesBanner from "./components/SalesBanner";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Gallery />
         <Distributions />
         <FeatureShowcase />
+        <SalesBanner />
         <Units />
         <LocationMap />
         <ContactSection />
