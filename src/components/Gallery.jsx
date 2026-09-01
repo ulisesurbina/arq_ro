@@ -26,13 +26,13 @@ export default function Gallery() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.55, delay: (i % 3) * 0.08 }}
             className={`group relative overflow-hidden rounded-2xl shadow-card ${
-              i === 0 ? "col-span-2 aspect-[16/9]" : ""
+              i === 0 ? "col-span-2 aspect-[16/9]" : "aspect-square"
             }`}
           >
             <Media
               src={photo.src}
               alt={photo.alt}
-              className="h-full w-full object-cover bg-fondo-100 transition-transform duration-700 group-hover:scale-105"
+              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-azul-950/85 to-transparent px-4 py-3 text-[13px] text-white/95 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
               {photo.caption}
