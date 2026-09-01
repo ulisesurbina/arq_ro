@@ -54,7 +54,7 @@ export default function Units() {
               className="unit-card-border group flex flex-col justify-between rounded-2xl bg-white ring-1 ring-grafito-200 p-5 text-left cursor-pointer transition-shadow duration-300 hover:shadow-elevated hover:ring-azul-400"
               key={unit.id}
               type="button"
-              onClick={() => setSelectedUnitId(unit.id)}
+              onClick={() => unit.status === "disponible" && setSelectedUnitId(unit.id)}
               initial={{ opacity: 0, y: 24, scale: 1 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}

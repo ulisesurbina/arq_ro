@@ -58,6 +58,7 @@ export default function Overview() {
               className="h-full w-full object-contain"
               autoPlay
               muted
+              controls
               loop
               playsInline
               preload="metadata"

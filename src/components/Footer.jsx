@@ -7,9 +7,9 @@ import { InstagramIcon, FacebookIcon } from "./SocialIcons";
 const SOCIALS = [
   { key: "instagram", label: "Instagram", Icon: InstagramIcon, custom: true },
   { key: "facebook", label: "Facebook", Icon: FacebookIcon, custom: true },
-  { key: "youtube", label: "YouTube", Icon: SquarePlay },
+  // { key: "youtube", label: "YouTube", Icon: SquarePlay },
   { key: "tiktok", label: "TikTok", Icon: Music2 },
-  { key: "twitter", label: "X / Twitter", Icon: XIcon },
+  // { key: "twitter", label: "X / Twitter", Icon: XIcon },
 ];
 
 export default function Footer() {
