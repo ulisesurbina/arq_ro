@@ -66,7 +66,7 @@ export default function UnitModal({ unit, distribution, onClose }) {
             <Media
               src={distribution.photo}
               alt={`Interior tipo ${distribution.name}`}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain bg-grafito-900"
             />
           </div>
 

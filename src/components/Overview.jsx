@@ -3,6 +3,7 @@ import { MorphIcon } from "morphicons/react";
 import { Sparkles, Layers, Ruler, Building2 } from "lucide";
 import { project, projectGallery } from "../data/project";
 import Media from "./Media";
+import { useEffect, useRef } from "react";
 
 const HIGHLIGHTS = [
   { icon: Building2, text: "Edificio con planta baja y 3 niveles de diseño a tu medida" },
@@ -12,6 +13,26 @@ const HIGHLIGHTS = [
 ];
 
 export default function Overview() {
+  const videoRef = useRef(null);
+    // El navegador solo deja que el video arranque solo (autoPlay) si está
+    // "muted". Para darle sonido sin romper eso, escuchamos el primer clic
+    // o toque en CUALQUIER parte de la página (no solo el video) y ahí le
+    // quitamos el silencio. { once: true } hace que el listener se borre
+    // solo después de dispararse una vez.
+    useEffect(() => {
+      const unmute = () => {
+        const video = videoRef.current;
+        if (!video) return;
+        video.muted = false;
+        video.play().catch(() => {});
+      };
+      document.addEventListener("click", unmute, { once: true });
+      document.addEventListener("touchstart", unmute, { once: true });
+      return () => {
+        document.removeEventListener("click", unmute);
+        document.removeEventListener("touchstart", unmute);
+      };
+    }, []);
   return (
     <section id="proyecto" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
       <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-16 items-start">
@@ -53,6 +74,7 @@ export default function Overview() {
               className="h-full w-full object-cover"
             /> */}
             <video
+              ref={videoRef}
               src={project.heroVideo}
               poster={project.heroPoster}
               className="h-full w-full object-contain"
