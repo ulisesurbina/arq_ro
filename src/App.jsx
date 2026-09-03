@@ -10,6 +10,7 @@ import LocationMap from "./components/LocationMap";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import SalesBanner from "./components/SalesBanner";
+import AboutSection from "./components/AboutSection";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <AboutSection />
         <MarqueeBanner />
         <Overview />
         <Gallery />

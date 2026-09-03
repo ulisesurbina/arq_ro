@@ -5,6 +5,7 @@ import { Menu, X } from "lucide";
 import { project } from "../data/project";
 
 const LINKS = [
+  { href: "#nosotros", label: "Nosotros" },
   { href: "#proyecto", label: "Proyecto" },
   { href: "#distribuciones", label: "Distribuciones" },
   { href: "#detalles", label: "Detalles" },

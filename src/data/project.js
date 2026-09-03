@@ -204,3 +204,26 @@ export const currency = (value) =>
     currency: "MXN",
     maximumFractionDigits: 0,
   }).format(value);
+
+export const about = {
+  eyebrow: "Sobre nosotros",
+  title: "¿Quiénes somos?",
+  paragraphs: [
+    "ARQ' RO Construcciones es una empresa que ya tiene más de 20 años en el ramo de la construcción. En un inicio realizábamos trabajos de construcción a diferentes empresas como son restaurantes, hospitales y casas.",
+    "Pero decidimos empezar a desarrollar viviendas ya que nuestra misión es que en el momento en que las familias mexicanas tengan la necesidad de invertir en su patrimonio, no duden en que contamos con el personal capacitado y comprometido en cada uno de los procesos para adquirir una vivienda.",
+    "El éxito de ARQ' RO Construcciones ha sido principalmente por la confianza que nos ha brindado nuestros clientes, aunado con el compromiso que tenemos de que cada proyecto esté hecho con materiales de primera calidad, así como estar a la vanguardia día a día.",
+  ],
+  servicesEyebrow: "Servicios",
+  servicesTitle: "¿Cómo te acompañamos?",
+  // Reemplaza esta ruta por la imagen que describe los servicios
+  // (ponla en public/images/ y referencia solo /images/tu-imagen.jpg)
+  servicesImage: "/images/servicios.png",
+  services: [
+    {
+      id: "tramite-credito",
+      title: "Trámites de crédito",
+      description:
+        "Nosotros nos encargamos de hacer todo el trámite de crédito de nuestros clientes, de manera que al estar con nosotros les facilitemos todo el proceso de adquisición de su inmueble, utilizando nuestra experiencia y buscando la mejor opción para el cliente.",
+    },
+  ],
+};
