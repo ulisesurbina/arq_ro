@@ -5,12 +5,12 @@ import { Menu, X } from "lucide";
 import { project } from "../data/project";
 
 const LINKS = [
-  { href: "#nosotros", label: "Nosotros" },
-  { href: "#proyecto", label: "Proyecto" },
-  { href: "#distribuciones", label: "Distribuciones" },
-  { href: "#detalles", label: "Detalles" },
-  { href: "#unidades", label: "Unidades" },
-  { href: "#ubicacion", label: "Ubicación" },
+  { href: "/#proyecto", label: "Proyecto" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/#detalles", label: "Detalles" },
+  { href: "/#distribuciones", label: "Distribuciones" },
+  { href: "/#unidades", label: "Unidades" },
+  { href: "/#ubicacion", label: "Ubicación" },
 ];
 
 export default function Navbar() {
@@ -36,7 +36,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
         <a
-          href="#top"
+          href="/#top"
           className={`font-display text-lg sm:text-xl tracking-tight transition-colors ${
             scrolled || open ? "text-azul-900" : "text-white"
           }`}

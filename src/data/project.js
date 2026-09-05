@@ -215,8 +215,6 @@ export const about = {
   ],
   servicesEyebrow: "Servicios",
   servicesTitle: "¿Cómo te acompañamos?",
-  // Reemplaza esta ruta por la imagen que describe los servicios
-  // (ponla en public/images/ y referencia solo /images/tu-imagen.jpg)
   servicesImage: "/images/servicios.png",
   services: [
     {
