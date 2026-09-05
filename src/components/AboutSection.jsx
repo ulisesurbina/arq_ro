@@ -3,7 +3,6 @@ import { MorphIcon } from "morphicons/react";
 import { Check } from "lucide";
 import { about } from "../data/project";
 import Media from "./Media";
-import BlueprintDivider from "./BlueprintDivider";
 
 export default function AboutSection() {
   return (
