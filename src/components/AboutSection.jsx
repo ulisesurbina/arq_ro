@@ -12,9 +12,9 @@ export default function AboutSection() {
           <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-azul-300">
             {about.eyebrow}
           </span>
-          <h1 className="font-display text-4xl sm:text-5xl text-white mt-3 text-balance">
+          {/* <h1 className="font-display text-4xl sm:text-5xl text-white mt-3 text-balance">
             {about.title}
-          </h1>
+          </h1> */}
         </div>
       </div>
       <section id="nosotros" className="max-w-6xl mx-auto px-5 sm:px-8">
